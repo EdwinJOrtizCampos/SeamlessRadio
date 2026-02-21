@@ -9,6 +9,9 @@ __pycache__
 build
 dist
 
+# Binaries
+*_rc.py
+
 # Test media
 *.mp3
 
