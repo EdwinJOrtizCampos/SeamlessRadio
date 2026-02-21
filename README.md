@@ -1,0 +1,2 @@
+# SeamlessRadio
+Simple app for playing radio stations sourced from video games that feature them, simulating the real-time playback typical while gaming. Can be applied to any audio format that mimics a radio. More features coming soon!
