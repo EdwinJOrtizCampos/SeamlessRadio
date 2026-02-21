@@ -1,0 +1,17 @@
+# IDE
+.vscode
+
+# Python Cache
+*.pyc
+__pycache__
+
+# PyInstaller-generated folders
+build
+dist
+
+# Test media
+*.mp3
+
+# Image edition software (for icons)
+*.psd
+*.XCF
