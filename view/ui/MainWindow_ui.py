@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'MainWindow.ui'
+## Form generated from reading UI file 'MainWindowXGhgmI.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.0
 ##
@@ -195,6 +195,7 @@ class Ui_MainWindow(object):
         sizePolicy1.setVerticalStretch(0)
         sizePolicy1.setHeightForWidth(self.widget_header.sizePolicy().hasHeightForWidth())
         self.widget_header.setSizePolicy(sizePolicy1)
+        self.widget_header.setMinimumSize(QSize(0, 50))
         self.horizontalLayout_2 = QHBoxLayout(self.widget_header)
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
         self.widget_no_audio = QWidget(self.widget_header)
@@ -241,9 +242,10 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_2.addWidget(self.label_current_time)
 
-        self.spacer_no_audio = QSpacerItem(138, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+        self.dummy_compensator_widget = QWidget(self.widget_header)
+        self.dummy_compensator_widget.setObjectName(u"dummy_compensator_widget")
 
-        self.horizontalLayout_2.addItem(self.spacer_no_audio)
+        self.horizontalLayout_2.addWidget(self.dummy_compensator_widget)
 
         self.horizontalLayout_2.setStretch(0, 33)
         self.horizontalLayout_2.setStretch(1, 33)
@@ -275,6 +277,15 @@ class Ui_MainWindow(object):
         self.button_am.setFont(font)
         self.button_am.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.button_am.setFocusPolicy(Qt.FocusPolicy.ClickFocus)
+        self.button_am.setStyleSheet(u"QPushButton\n"
+"{\n"
+"	color: white\n"
+"}\n"
+"\n"
+"QPushButton:hover\n"
+"{\n"
+"	color: red\n"
+"}")
         self.button_am.setFlat(True)
 
         self.verticalLayout_5.addWidget(self.button_am)
@@ -284,6 +295,15 @@ class Ui_MainWindow(object):
         self.button_fm.setFont(font)
         self.button_fm.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.button_fm.setFocusPolicy(Qt.FocusPolicy.ClickFocus)
+        self.button_fm.setStyleSheet(u"QPushButton\n"
+"{\n"
+"	color: white\n"
+"}\n"
+"\n"
+"QPushButton:hover\n"
+"{\n"
+"	color: red\n"
+"}")
         self.button_fm.setFlat(True)
 
         self.verticalLayout_5.addWidget(self.button_fm)
@@ -293,6 +313,15 @@ class Ui_MainWindow(object):
         self.button_dab.setFont(font)
         self.button_dab.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.button_dab.setFocusPolicy(Qt.FocusPolicy.ClickFocus)
+        self.button_dab.setStyleSheet(u"QPushButton\n"
+"{\n"
+"	color: white\n"
+"}\n"
+"\n"
+"QPushButton:hover\n"
+"{\n"
+"	color: red\n"
+"}")
         self.button_dab.setFlat(True)
 
         self.verticalLayout_5.addWidget(self.button_dab)
@@ -378,6 +407,15 @@ class Ui_MainWindow(object):
         self.pushButton_16.setFont(font)
         self.pushButton_16.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.pushButton_16.setFocusPolicy(Qt.FocusPolicy.ClickFocus)
+        self.pushButton_16.setStyleSheet(u"QPushButton\n"
+"{\n"
+"	color: white\n"
+"}\n"
+"\n"
+"QPushButton:hover\n"
+"{\n"
+"	color: red\n"
+"}")
         self.pushButton_16.setFlat(True)
 
         self.verticalLayout_6.addWidget(self.pushButton_16)
@@ -400,6 +438,15 @@ class Ui_MainWindow(object):
         self.button_explore.setFont(font)
         self.button_explore.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.button_explore.setFocusPolicy(Qt.FocusPolicy.ClickFocus)
+        self.button_explore.setStyleSheet(u"QPushButton\n"
+"{\n"
+"	color: white\n"
+"}\n"
+"\n"
+"QPushButton:hover\n"
+"{\n"
+"	color: red\n"
+"}")
         self.button_explore.setFlat(True)
 
         self.horizontalLayout_4.addWidget(self.button_explore)
@@ -416,6 +463,15 @@ class Ui_MainWindow(object):
         self.button_previous.setFont(font)
         self.button_previous.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.button_previous.setFocusPolicy(Qt.FocusPolicy.ClickFocus)
+        self.button_previous.setStyleSheet(u"QPushButton\n"
+"{\n"
+"	color: white\n"
+"}\n"
+"\n"
+"QPushButton:hover\n"
+"{\n"
+"	color: red\n"
+"}")
         self.button_previous.setFlat(True)
 
         self.horizontalLayout_4.addWidget(self.button_previous)
@@ -432,7 +488,15 @@ class Ui_MainWindow(object):
         self.button_syntonize.setFont(font)
         self.button_syntonize.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.button_syntonize.setFocusPolicy(Qt.FocusPolicy.ClickFocus)
-        self.button_syntonize.setStyleSheet(u"")
+        self.button_syntonize.setStyleSheet(u"QPushButton\n"
+"{\n"
+"	color: white\n"
+"}\n"
+"\n"
+"QPushButton:hover\n"
+"{\n"
+"	color: red\n"
+"}")
         self.button_syntonize.setFlat(True)
 
         self.horizontalLayout_4.addWidget(self.button_syntonize)
@@ -449,6 +513,15 @@ class Ui_MainWindow(object):
         self.button_next.setFont(font)
         self.button_next.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.button_next.setFocusPolicy(Qt.FocusPolicy.ClickFocus)
+        self.button_next.setStyleSheet(u"QPushButton\n"
+"{\n"
+"	color: white\n"
+"}\n"
+"\n"
+"QPushButton:hover\n"
+"{\n"
+"	color: red\n"
+"}")
         self.button_next.setFlat(True)
 
         self.horizontalLayout_4.addWidget(self.button_next)
@@ -465,6 +538,15 @@ class Ui_MainWindow(object):
         self.button_menu_audio.setFont(font)
         self.button_menu_audio.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.button_menu_audio.setFocusPolicy(Qt.FocusPolicy.ClickFocus)
+        self.button_menu_audio.setStyleSheet(u"QPushButton\n"
+"{\n"
+"	color: white\n"
+"}\n"
+"\n"
+"QPushButton:hover\n"
+"{\n"
+"	color: red\n"
+"}")
         self.button_menu_audio.setFlat(True)
 
         self.horizontalLayout_4.addWidget(self.button_menu_audio)

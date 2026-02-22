@@ -295,6 +295,12 @@ TUNE</string>
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
          <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="33,33,0">
           <item>
            <widget class="QWidget" name="widget_no_audio" native="true">
@@ -386,17 +392,7 @@ TUNE</string>
            </widget>
           </item>
           <item>
-           <spacer name="spacer_no_audio">
-            <property name="orientation">
-             <enum>Qt::Orientation::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>138</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
+           <widget class="QWidget" name="dummy_compensator_widget" native="true"/>
           </item>
          </layout>
         </widget>
@@ -440,6 +436,17 @@ TUNE</string>
                   <property name="focusPolicy">
                    <enum>Qt::FocusPolicy::ClickFocus</enum>
                   </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton
+{
+	color: white
+}
+
+QPushButton:hover
+{
+	color: red
+}</string>
+                  </property>
                   <property name="text">
                    <string>AM</string>
                   </property>
@@ -462,6 +469,17 @@ TUNE</string>
                   <property name="focusPolicy">
                    <enum>Qt::FocusPolicy::ClickFocus</enum>
                   </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton
+{
+	color: white
+}
+
+QPushButton:hover
+{
+	color: red
+}</string>
+                  </property>
                   <property name="text">
                    <string>FM</string>
                   </property>
@@ -483,6 +501,17 @@ TUNE</string>
                   </property>
                   <property name="focusPolicy">
                    <enum>Qt::FocusPolicy::ClickFocus</enum>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton
+{
+	color: white
+}
+
+QPushButton:hover
+{
+	color: red
+}</string>
                   </property>
                   <property name="text">
                    <string>DAB</string>
@@ -629,6 +658,17 @@ TUNE</string>
                   <property name="focusPolicy">
                    <enum>Qt::FocusPolicy::ClickFocus</enum>
                   </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton
+{
+	color: white
+}
+
+QPushButton:hover
+{
+	color: red
+}</string>
+                  </property>
                   <property name="text">
                    <string>Info</string>
                   </property>
@@ -669,6 +709,17 @@ TUNE</string>
                <property name="focusPolicy">
                 <enum>Qt::FocusPolicy::ClickFocus</enum>
                </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton
+{
+	color: white
+}
+
+QPushButton:hover
+{
+	color: red
+}</string>
+               </property>
                <property name="text">
                 <string>Explora</string>
                </property>
@@ -697,6 +748,17 @@ TUNE</string>
                </property>
                <property name="focusPolicy">
                 <enum>Qt::FocusPolicy::ClickFocus</enum>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton
+{
+	color: white
+}
+
+QPushButton:hover
+{
+	color: red
+}</string>
                </property>
                <property name="text">
                 <string>&lt;&lt;</string>
@@ -728,7 +790,15 @@ TUNE</string>
                 <enum>Qt::FocusPolicy::ClickFocus</enum>
                </property>
                <property name="styleSheet">
-                <string notr="true"/>
+                <string notr="true">QPushButton
+{
+	color: white
+}
+
+QPushButton:hover
+{
+	color: red
+}</string>
                </property>
                <property name="text">
                 <string> Sintonizar</string>
@@ -759,6 +829,17 @@ TUNE</string>
                <property name="focusPolicy">
                 <enum>Qt::FocusPolicy::ClickFocus</enum>
                </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton
+{
+	color: white
+}
+
+QPushButton:hover
+{
+	color: red
+}</string>
+               </property>
                <property name="text">
                 <string>&gt;&gt;</string>
                </property>
@@ -787,6 +868,17 @@ TUNE</string>
                </property>
                <property name="focusPolicy">
                 <enum>Qt::FocusPolicy::ClickFocus</enum>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton
+{
+	color: white
+}
+
+QPushButton:hover
+{
+	color: red
+}</string>
                </property>
                <property name="text">
                 <string>Audio</string>
