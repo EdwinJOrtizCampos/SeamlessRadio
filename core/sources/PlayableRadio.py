@@ -26,6 +26,16 @@ class PlayableRadio(ABC):
         """
         ...
     
+    @property        
+    def freq(self) -> str:
+        """
+        Every radio must have a frequency (i.e: 12.23MHz)
+        This is just a mock value for pseudo realism
+        """
+        first_half = int(hashlib.sha1(self.name[:len(self.name)//2].encode("utf-8")).hexdigest(), 16) % (10 ** 2)
+        second_half = int(hashlib.sha1(self.name[len(self.name)//2:].encode("utf-8")).hexdigest(), 16) % (10 ** 2)
+        return f"{first_half}.{second_half}"
+        
     @abstractmethod
     def __len__(self) -> int:
         """
