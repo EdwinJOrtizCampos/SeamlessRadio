@@ -1,0 +1,24 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>favicon.png</file>
+    <file>syntonizeIconSelected.png</file>
+    <file>syntonizeIconUnselected.png</file>
+    <file>tripIconSelected.png</file>
+    <file>tripIconUnselected.png</file>
+    <file>settingsIconSelected.png</file>
+    <file>settingsIconUnselected.png</file>
+    <file>footerAudioIconSelected.png</file>
+    <file>footerAudioIconUnselected.png</file>
+    <file>connectIconSelected.png</file>
+    <file>connectIconUnselected.png</file>
+    <file>phoneIconSelected.png</file>
+    <file>phoneIconUnselected.png</file>
+    <file>mediaIconSelected.png</file>
+    <file>mediaIconUnselected.png</file>
+    <file>volDial.png</file>
+    <file>radioIconSelected.png</file>
+    <file>radioIconUnselected.png</file>
+    <file>tuneDial.png</file>
+    <file>noAudioOutput.png</file>
+  </qresource>
+</RCC>
