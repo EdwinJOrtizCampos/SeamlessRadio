@@ -8,7 +8,6 @@ class Mp3Radio(PlayableRadio):
     PlayableRadio from a .mp3 file
     """
     
-    def __init__(self, name: str, path: str):
     def __init__(self, name: str, path: str, freq:str=None):
         self._name = name
         self._path = path
