@@ -22,4 +22,5 @@
     <file>tuneDial.png</file>
     <file>noAudioOutput.png</file>
   </qresource>
+    <file>noiconfm.png</file>
 </RCC>

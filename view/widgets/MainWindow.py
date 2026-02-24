@@ -2,6 +2,7 @@ from PySide6.QtWidgets import (
     QMainWindow, QLabel, QDial,
     QPushButton, QWidget
 )
+from PySide6.QtGui import QPixmap
 from PySide6.QtCore import Signal
 
 from core.sources.PlayableRadio import PlayableRadio
@@ -22,15 +23,16 @@ class MainWindow(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         
-        self.dial_volume        : QDial = self.ui.dial_volume
-        self.dial_tune          : QDial = self.ui.dial_tune
-        self.button_previous    : QPushButton = self.ui.button_previous
-        self.button_next        : QPushButton = self.ui.button_next
-        self.widget_no_audio    : QWidget = self.ui.widget_no_audio
-        self.label_current_time : QLabel = self.ui.label_current_time
-        self.label_radio_name   : QLabel = self.ui.label_radio_name
-        self.label_radio_freq   : QLabel = self.ui.label_radio_freq
-        self.dummy_spacer       : QWidget = self.ui.dummy_compensator_widget
+        self.dial_volume           : QDial = self.ui.dial_volume
+        self.dial_tune             : QDial = self.ui.dial_tune
+        self.button_previous       : QPushButton = self.ui.button_previous
+        self.button_next           : QPushButton = self.ui.button_next
+        self.widget_no_audio       : QWidget = self.ui.widget_no_audio
+        self.label_current_time    : QLabel = self.ui.label_current_time
+        self.label_radio_name      : QLabel = self.ui.label_radio_name
+        self.label_radio_freq      : QLabel = self.ui.label_radio_freq
+        self.label_radio_thumbnail : QLabel = self.ui.label_radio_icon
+        self.dummy_spacer          : QWidget = self.ui.dummy_compensator_widget
 
         
         self.playlist: list[PlayableRadio] = DataLoader.getData()
@@ -73,6 +75,8 @@ class MainWindow(QMainWindow):
         radio_to_play: PlayableRadio = self.playlist[self.dial_tune.value()]
         self.label_radio_name.setText(radio_to_play.name)
         self.label_radio_freq.setText(f"{radio_to_play.freq}MHz")
+        self.label_radio_freq.setText(f"{radio_to_play.freq}MHz")
+        self.label_radio_thumbnail.setPixmap(QPixmap(radio_to_play.thumbnail))
 
     def on_button_next_radio_clicked(self) -> None:
         self.current_radio_idx += 1

@@ -25,6 +25,14 @@ class PlayableRadio(ABC):
         Every radio must have a name
         """
         ...
+
+    @property        
+    @abstractmethod
+    def thumbnail(self) -> str:
+        """
+        Every radio must have a thumbnail
+        """
+        ...
     
     @property        
     def freq(self) -> str:

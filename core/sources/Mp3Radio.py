@@ -8,10 +8,11 @@ class Mp3Radio(PlayableRadio):
     PlayableRadio from a .mp3 file
     """
     
-    def __init__(self, name: str, path: str, freq:str=None):
+    def __init__(self, name: str, path: str, thumbnail: str, freq:str=None):
         self._name = name
         self._path = path
         self._freq = freq
+        self._thumbnail = thumbnail
         
     @property
     def path(self) -> None:
@@ -20,6 +21,10 @@ class Mp3Radio(PlayableRadio):
     @property        
     def name(self) -> str:
         return self._name
+    
+    @property
+    def thumbnail(self) -> str:
+        return self._thumbnail
     
     @property
     def freq(self) -> str:

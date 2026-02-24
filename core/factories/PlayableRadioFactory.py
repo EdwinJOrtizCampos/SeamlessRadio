@@ -9,13 +9,13 @@ class PlayableRadioFactory:
     such as the extension of the filename they wrap
     """
     @staticmethod
-    def getRadioFromLocalFile(radio_name: str, path: str, freq:str = None) -> PlayableRadio:
+    def getRadioFromLocalFile(radio_name: str, path: str, thumbnailPath: str = None, freq:str = None) -> PlayableRadio:
         assert isinstance(radio_name, str), "Radio name must be a string"
         parsed_path = Path(ResourcePath.getFrom(path))
         assert parsed_path.exists(), f"Audio source doesn't exist: {parsed_path}"
         
         match (extension := parsed_path.suffix):
             case '.mp3':
-                return Mp3Radio(radio_name, parsed_path.as_posix(), freq)
+                return Mp3Radio(radio_name, parsed_path.as_posix(), thumbnailPath or ":/thumbnails/noiconfm.png", freq)
             case _:
                 raise ValueError(f"{extension} files are not supported")

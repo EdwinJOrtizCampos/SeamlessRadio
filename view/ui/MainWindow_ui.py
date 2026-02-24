@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'MainWindowXGhgmI.ui'
+## Form generated from reading UI file 'MainWindow.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.0
 ##
@@ -336,27 +336,53 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_5.addWidget(self.line_11)
 
-        self.widget_4 = QWidget(self.widget_radio_visor)
-        self.widget_4.setObjectName(u"widget_4")
-        sizePolicy3 = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Preferred)
+        self.widget_3 = QWidget(self.widget_radio_visor)
+        self.widget_3.setObjectName(u"widget_3")
+        self.gridLayout_2 = QGridLayout(self.widget_3)
+        self.gridLayout_2.setObjectName(u"gridLayout_2")
+        self.gridLayout_2.setContentsMargins(-1, -1, 12, -1)
+        self.verticalSpacer_7 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+
+        self.gridLayout_2.addItem(self.verticalSpacer_7, 0, 1, 1, 1)
+
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.gridLayout_2.addItem(self.horizontalSpacer, 1, 0, 1, 1)
+
+        self.widget_2 = QWidget(self.widget_3)
+        self.widget_2.setObjectName(u"widget_2")
+        sizePolicy.setHeightForWidth(self.widget_2.sizePolicy().hasHeightForWidth())
+        self.widget_2.setSizePolicy(sizePolicy)
+        self.horizontalLayout_7 = QHBoxLayout(self.widget_2)
+        self.horizontalLayout_7.setSpacing(9)
+        self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
+        self.horizontalLayout_7.setContentsMargins(0, 0, 0, 0)
+        self.label_radio_icon = QLabel(self.widget_2)
+        self.label_radio_icon.setObjectName(u"label_radio_icon")
+        sizePolicy3 = QSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Fixed)
         sizePolicy3.setHorizontalStretch(0)
         sizePolicy3.setVerticalStretch(0)
-        sizePolicy3.setHeightForWidth(self.widget_4.sizePolicy().hasHeightForWidth())
-        self.widget_4.setSizePolicy(sizePolicy3)
-        self.verticalLayout_4 = QVBoxLayout(self.widget_4)
-        self.verticalLayout_4.setObjectName(u"verticalLayout_4")
-        self.verticalSpacer_8 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+        sizePolicy3.setHeightForWidth(self.label_radio_icon.sizePolicy().hasHeightForWidth())
+        self.label_radio_icon.setSizePolicy(sizePolicy3)
+        self.label_radio_icon.setMinimumSize(QSize(128, 128))
+        self.label_radio_icon.setMaximumSize(QSize(128, 128))
+        self.label_radio_icon.setPixmap(QPixmap(u":/thumbnails/noiconfm.png"))
+        self.label_radio_icon.setScaledContents(True)
 
-        self.verticalLayout_4.addItem(self.verticalSpacer_8)
+        self.horizontalLayout_7.addWidget(self.label_radio_icon)
 
+        self.widget_4 = QWidget(self.widget_2)
+        self.widget_4.setObjectName(u"widget_4")
+        self.verticalLayout_8 = QVBoxLayout(self.widget_4)
+        self.verticalLayout_8.setObjectName(u"verticalLayout_8")
         self.label_radio_freq = QLabel(self.widget_4)
         self.label_radio_freq.setObjectName(u"label_radio_freq")
         font3 = QFont()
         font3.setPointSize(12)
         self.label_radio_freq.setFont(font3)
-        self.label_radio_freq.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.label_radio_freq.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
 
-        self.verticalLayout_4.addWidget(self.label_radio_freq)
+        self.verticalLayout_8.addWidget(self.label_radio_freq)
 
         self.label_radio_name = QLabel(self.widget_4)
         self.label_radio_name.setObjectName(u"label_radio_name")
@@ -364,32 +390,42 @@ class Ui_MainWindow(object):
         font4.setPointSize(26)
         font4.setBold(False)
         self.label_radio_name.setFont(font4)
-        self.label_radio_name.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.label_radio_name.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
 
-        self.verticalLayout_4.addWidget(self.label_radio_name)
+        self.verticalLayout_8.addWidget(self.label_radio_name)
 
         self.label_radio_url = QLabel(self.widget_4)
         self.label_radio_url.setObjectName(u"label_radio_url")
         self.label_radio_url.setFont(font3)
         self.label_radio_url.setTextFormat(Qt.TextFormat.PlainText)
-        self.label_radio_url.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.label_radio_url.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.label_radio_url.setOpenExternalLinks(True)
         self.label_radio_url.setTextInteractionFlags(Qt.TextInteractionFlag.LinksAccessibleByMouse)
 
-        self.verticalLayout_4.addWidget(self.label_radio_url)
+        self.verticalLayout_8.addWidget(self.label_radio_url)
 
         self.label_radio_description = QLabel(self.widget_4)
         self.label_radio_description.setObjectName(u"label_radio_description")
-        self.label_radio_description.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.label_radio_description.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
 
-        self.verticalLayout_4.addWidget(self.label_radio_description)
-
-        self.verticalSpacer_7 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
-
-        self.verticalLayout_4.addItem(self.verticalSpacer_7)
+        self.verticalLayout_8.addWidget(self.label_radio_description)
 
 
-        self.horizontalLayout_5.addWidget(self.widget_4)
+        self.horizontalLayout_7.addWidget(self.widget_4)
+
+
+        self.gridLayout_2.addWidget(self.widget_2, 1, 1, 1, 1)
+
+        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.gridLayout_2.addItem(self.horizontalSpacer_2, 1, 2, 1, 1)
+
+        self.verticalSpacer_8 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+
+        self.gridLayout_2.addItem(self.verticalSpacer_8, 2, 1, 1, 1)
+
+
+        self.horizontalLayout_5.addWidget(self.widget_3)
 
         self.line_12 = QFrame(self.widget_radio_visor)
         self.line_12.setObjectName(u"line_12")
@@ -750,6 +786,7 @@ class Ui_MainWindow(object):
         self.button_am.setText(QCoreApplication.translate("MainWindow", u"AM", None))
         self.button_fm.setText(QCoreApplication.translate("MainWindow", u"FM", None))
         self.button_dab.setText(QCoreApplication.translate("MainWindow", u"DAB", None))
+        self.label_radio_icon.setText("")
         self.label_radio_freq.setText(QCoreApplication.translate("MainWindow", u"11.20 MHz", None))
         self.label_radio_name.setText(QCoreApplication.translate("MainWindow", u"TEST FM", None))
         self.label_radio_url.setText(QCoreApplication.translate("MainWindow", u"www.example.com", None))
