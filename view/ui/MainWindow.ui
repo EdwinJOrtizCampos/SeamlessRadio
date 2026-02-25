@@ -23,11 +23,6 @@
 	background-color: black;
 }
 
-QWidget#widget_radio_list
-{
-	background: rgb(255, 253, 202);
-}
-
 QWidget#widget_header
 {
 	background: transparent;
@@ -76,6 +71,57 @@ QPushButton
 	color: white;
 	height: 32px;
 	width: 32px;
+}
+
+QTableView#table_radio_list
+{
+    background-color: transparent;
+    color: white;
+    font-family: &quot;Segoe UI&quot;;
+    font-size: 8px;
+    font-weight: 600;
+}
+
+QTableView#table_radio_list::item
+{
+    border-right: 1px solid qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:1, stop:0 rgba(0, 0, 0, 0), stop:0.225275 rgba(196, 0, 0, 173), stop:0.505495 rgba(255, 0, 0, 255), stop:0.78022 rgba(196, 0, 0, 173), stop:1 rgba(255, 255, 255, 0));
+    border-left: 1px solid qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:1, stop:0 rgba(0, 0, 0, 0), stop:0.225275 rgba(196, 0, 0, 173), stop:0.505495 rgba(255, 0, 0, 255), stop:0.78022 rgba(196, 0, 0, 173), stop:1 rgba(255, 255, 255, 0));
+}
+
+QTableView#table_radio_list::item:selected
+{
+	color: red;
+}
+
+QTableView#table_radio_list::item:hover:selected
+{
+	color: red;
+}
+
+QScrollBar:horizontal {
+    background: transparent;
+    height: 4px;
+    margin: 0px;
+}
+
+QScrollBar::handle:horizontal {
+    background: rgb(98, 98, 98);
+    border-radius: 2px;
+    min-width: 20px;
+}
+
+QScrollBar::handle:horizontal:hover {
+    background: rgb(68, 68, 68);
+}
+
+QScrollBar::add-line:horizontal,
+QScrollBar::sub-line:horizontal {
+    width: 0px;
+}
+
+QScrollBar::add-page:horizontal,
+QScrollBar::sub-page:horizontal {
+    background: transparent;
 }</string>
   </property>
   <widget class="QWidget" name="widget_frame">
@@ -408,9 +454,81 @@ TUNE</string>
          <property name="minimumSize">
           <size>
            <width>0</width>
-           <height>10</height>
+           <height>40</height>
           </size>
          </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>40</height>
+          </size>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QTableView" name="table_radio_list">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::FocusPolicy::NoFocus</enum>
+            </property>
+            <property name="verticalScrollBarPolicy">
+             <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+            </property>
+            <property name="editTriggers">
+             <set>QAbstractItemView::EditTrigger::CurrentChanged</set>
+            </property>
+            <property name="selectionMode">
+             <enum>QAbstractItemView::SelectionMode::SingleSelection</enum>
+            </property>
+            <property name="horizontalScrollMode">
+             <enum>QAbstractItemView::ScrollMode::ScrollPerPixel</enum>
+            </property>
+            <property name="showGrid">
+             <bool>false</bool>
+            </property>
+            <property name="cornerButtonEnabled">
+             <bool>false</bool>
+            </property>
+            <attribute name="horizontalHeaderVisible">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderVisible">
+             <bool>false</bool>
+            </attribute>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
        <item>
