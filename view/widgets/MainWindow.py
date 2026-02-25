@@ -2,8 +2,8 @@ from PySide6.QtWidgets import (
     QMainWindow, QLabel, QDial,
     QPushButton, QWidget, QTableView
 )
-from PySide6.QtGui import QPixmap
-from PySide6.QtCore import Signal, QModelIndex
+from PySide6.QtGui import QPixmap, QPainter
+from PySide6.QtCore import Signal, QModelIndex, Qt, QEvent
 
 from core.sources.PlayableRadio import PlayableRadio
 from core.RadioPlayer import RadioPlayer
@@ -34,8 +34,12 @@ class MainWindow(QMainWindow):
         self.label_radio_freq      : QLabel = self.ui.label_radio_freq
         self.label_radio_thumbnail : QLabel = self.ui.label_radio_icon
         self.dummy_spacer          : QWidget = self.ui.dummy_compensator_widget
+        self.widget_content        : QWidget = self.ui.widget_content
         self.table_radios          : QTableView = self.ui.table_radio_list
 
+        self.background_pixmap = QPixmap(":/icons/background.jpg")
+        self.widget_content.setAttribute(Qt.WA_StyledBackground, True)
+        self.widget_content.installEventFilter(self)
         
         self.playlist: list[PlayableRadio] = DataLoader.getData()
         self.timer_thread = TimeWatcherThread(self)
@@ -108,3 +112,24 @@ class MainWindow(QMainWindow):
         self.current_radio_idx = index.column()
         self.dial_tune.setValue(self.current_radio_idx)
         self.on_tune_dial_song_selected()
+
+    def eventFilter(self, obj, event):
+        """
+        Draws the background in self.widget_content
+        """
+        # ? QSS doesn't work well when setting a custom background.
+        # ? The only way I've found how to do it is this way.
+        if obj == self.widget_content and event.type() == QEvent.Paint:
+            painter = QPainter(self.widget_content)
+
+            if not self.background_pixmap.isNull():
+                scaled = self.background_pixmap.scaled(
+                    self.widget_content.size(),
+                    Qt.KeepAspectRatioByExpanding,
+                    Qt.SmoothTransformation
+                )
+                painter.drawPixmap(0, 0, scaled)
+
+            return False
+
+        return super().eventFilter(obj, event)

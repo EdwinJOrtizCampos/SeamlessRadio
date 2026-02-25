@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="icons">
+    <file>background.jpg</file>
     <file>noIcon.png</file>
     <file>favicon.png</file>
     <file>syntonizeIconSelected.png</file>
