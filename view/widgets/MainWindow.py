@@ -104,6 +104,7 @@ class MainWindow(QMainWindow):
         event.accept()
 
     def on_table_radio_clicked(self, index: QModelIndex) -> None:
+        if self.current_radio_idx == index.column(): return
         self.current_radio_idx = index.column()
         self.dial_tune.setValue(self.current_radio_idx)
         self.on_tune_dial_song_selected()
