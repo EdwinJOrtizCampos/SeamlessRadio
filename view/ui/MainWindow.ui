@@ -552,7 +552,7 @@ TUNE</string>
                    <cursorShape>PointingHandCursor</cursorShape>
                   </property>
                   <property name="focusPolicy">
-                   <enum>Qt::FocusPolicy::ClickFocus</enum>
+                   <enum>Qt::FocusPolicy::NoFocus</enum>
                   </property>
                   <property name="styleSheet">
                    <string notr="true">QPushButton
@@ -585,7 +585,7 @@ QPushButton:hover
                    <cursorShape>PointingHandCursor</cursorShape>
                   </property>
                   <property name="focusPolicy">
-                   <enum>Qt::FocusPolicy::ClickFocus</enum>
+                   <enum>Qt::FocusPolicy::NoFocus</enum>
                   </property>
                   <property name="styleSheet">
                    <string notr="true">QPushButton
@@ -618,7 +618,7 @@ QPushButton:hover
                    <cursorShape>PointingHandCursor</cursorShape>
                   </property>
                   <property name="focusPolicy">
-                   <enum>Qt::FocusPolicy::ClickFocus</enum>
+                   <enum>Qt::FocusPolicy::NoFocus</enum>
                   </property>
                   <property name="styleSheet">
                    <string notr="true">QPushButton
@@ -861,7 +861,7 @@ QPushButton:hover
                    <cursorShape>PointingHandCursor</cursorShape>
                   </property>
                   <property name="focusPolicy">
-                   <enum>Qt::FocusPolicy::ClickFocus</enum>
+                   <enum>Qt::FocusPolicy::NoFocus</enum>
                   </property>
                   <property name="styleSheet">
                    <string notr="true">QPushButton
@@ -912,7 +912,7 @@ QPushButton:hover
                 <cursorShape>PointingHandCursor</cursorShape>
                </property>
                <property name="focusPolicy">
-                <enum>Qt::FocusPolicy::ClickFocus</enum>
+                <enum>Qt::FocusPolicy::NoFocus</enum>
                </property>
                <property name="styleSheet">
                 <string notr="true">QPushButton
@@ -952,7 +952,7 @@ QPushButton:hover
                 <cursorShape>PointingHandCursor</cursorShape>
                </property>
                <property name="focusPolicy">
-                <enum>Qt::FocusPolicy::ClickFocus</enum>
+                <enum>Qt::FocusPolicy::NoFocus</enum>
                </property>
                <property name="styleSheet">
                 <string notr="true">QPushButton
@@ -992,7 +992,7 @@ QPushButton:hover
                 <cursorShape>PointingHandCursor</cursorShape>
                </property>
                <property name="focusPolicy">
-                <enum>Qt::FocusPolicy::ClickFocus</enum>
+                <enum>Qt::FocusPolicy::NoFocus</enum>
                </property>
                <property name="styleSheet">
                 <string notr="true">QPushButton
@@ -1032,7 +1032,7 @@ QPushButton:hover
                 <cursorShape>PointingHandCursor</cursorShape>
                </property>
                <property name="focusPolicy">
-                <enum>Qt::FocusPolicy::ClickFocus</enum>
+                <enum>Qt::FocusPolicy::NoFocus</enum>
                </property>
                <property name="styleSheet">
                 <string notr="true">QPushButton
@@ -1072,7 +1072,7 @@ QPushButton:hover
                 <cursorShape>PointingHandCursor</cursorShape>
                </property>
                <property name="focusPolicy">
-                <enum>Qt::FocusPolicy::ClickFocus</enum>
+                <enum>Qt::FocusPolicy::NoFocus</enum>
                </property>
                <property name="styleSheet">
                 <string notr="true">QPushButton
@@ -1114,7 +1114,7 @@ QPushButton:hover
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
             <property name="focusPolicy">
-             <enum>Qt::FocusPolicy::ClickFocus</enum>
+             <enum>Qt::FocusPolicy::NoFocus</enum>
             </property>
             <property name="styleSheet">
              <string notr="true">QPushButton
@@ -1154,7 +1154,7 @@ image: url(:/icons/radioIconSelected.png);
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
             <property name="focusPolicy">
-             <enum>Qt::FocusPolicy::ClickFocus</enum>
+             <enum>Qt::FocusPolicy::NoFocus</enum>
             </property>
             <property name="styleSheet">
              <string notr="true">QPushButton
@@ -1188,7 +1188,7 @@ image: url(:/icons/mediaIconSelected.png);
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
             <property name="focusPolicy">
-             <enum>Qt::FocusPolicy::ClickFocus</enum>
+             <enum>Qt::FocusPolicy::NoFocus</enum>
             </property>
             <property name="styleSheet">
              <string notr="true">QPushButton
@@ -1222,7 +1222,7 @@ image: url(:/icons/phoneIconSelected.png);
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
             <property name="focusPolicy">
-             <enum>Qt::FocusPolicy::ClickFocus</enum>
+             <enum>Qt::FocusPolicy::NoFocus</enum>
             </property>
             <property name="styleSheet">
              <string notr="true">QPushButton
@@ -1256,7 +1256,7 @@ image: url(:/icons/connectIconSelected.png);
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
             <property name="focusPolicy">
-             <enum>Qt::FocusPolicy::ClickFocus</enum>
+             <enum>Qt::FocusPolicy::NoFocus</enum>
             </property>
             <property name="styleSheet">
              <string notr="true">QPushButton
@@ -1290,7 +1290,7 @@ image: url(:/icons/footerAudioIconSelected.png);
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
             <property name="focusPolicy">
-             <enum>Qt::FocusPolicy::ClickFocus</enum>
+             <enum>Qt::FocusPolicy::NoFocus</enum>
             </property>
             <property name="styleSheet">
              <string notr="true">QPushButton
@@ -1324,7 +1324,7 @@ image: url(:/icons/settingsIconSelected.png);
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
             <property name="focusPolicy">
-             <enum>Qt::FocusPolicy::ClickFocus</enum>
+             <enum>Qt::FocusPolicy::NoFocus</enum>
             </property>
             <property name="styleSheet">
              <string notr="true">QPushButton

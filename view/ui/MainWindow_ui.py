@@ -15,9 +15,10 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QHBoxLayout,
-    QLabel, QMainWindow, QPushButton, QSizePolicy,
-    QSpacerItem, QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QAbstractItemView, QApplication, QFrame, QGridLayout,
+    QHBoxLayout, QHeaderView, QLabel, QMainWindow,
+    QPushButton, QSizePolicy, QSpacerItem, QTableView,
+    QVBoxLayout, QWidget)
 
 from view.widgets.CustomDial import CustomDial
 import resources_rc
@@ -33,11 +34,6 @@ class Ui_MainWindow(object):
         MainWindow.setStyleSheet(u"QWidget#widget_frame\n"
 "{\n"
 "	background-color: black;\n"
-"}\n"
-"\n"
-"QWidget#widget_radio_list\n"
-"{\n"
-"	background: rgb(255, 253, 202);\n"
 "}\n"
 "\n"
 "QWidget#widget_header\n"
@@ -60,15 +56,15 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "\n"
-"Q"
-                        "Label\n"
+"QLabel\n"
 "{\n"
 "		color: white;\n"
 "}\n"
 "\n"
 "QLabel#label_no_audio\n"
 "{\n"
-"	color: #a70000;\n"
+"	colo"
+                        "r: #a70000;\n"
 "}\n"
 "\n"
 "QWidget#widget_content QFrame[frameShape=\"5\"]\n"
@@ -89,6 +85,59 @@ class Ui_MainWindow(object):
 "	color: white;\n"
 "	height: 32px;\n"
 "	width: 32px;\n"
+"}\n"
+"\n"
+"QTableView#table_radio_list\n"
+"{\n"
+"    background-color: transparent;\n"
+"    color: white;\n"
+"    font-family: \"Segoe UI\";\n"
+"    font-size: 8px;\n"
+"    font-weight: 600;\n"
+"}\n"
+""
+                        "\n"
+"QTableView#table_radio_list::item\n"
+"{\n"
+"    border-right: 1px solid qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:1, stop:0 rgba(0, 0, 0, 0), stop:0.225275 rgba(196, 0, 0, 173), stop:0.505495 rgba(255, 0, 0, 255), stop:0.78022 rgba(196, 0, 0, 173), stop:1 rgba(255, 255, 255, 0));\n"
+"    border-left: 1px solid qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:1, stop:0 rgba(0, 0, 0, 0), stop:0.225275 rgba(196, 0, 0, 173), stop:0.505495 rgba(255, 0, 0, 255), stop:0.78022 rgba(196, 0, 0, 173), stop:1 rgba(255, 255, 255, 0));\n"
+"}\n"
+"\n"
+"QTableView#table_radio_list::item:selected\n"
+"{\n"
+"	color: red;\n"
+"}\n"
+"\n"
+"QTableView#table_radio_list::item:hover:selected\n"
+"{\n"
+"	color: red;\n"
+"}\n"
+"\n"
+"QScrollBar:horizontal {\n"
+"    background: transparent;\n"
+"    height: 4px;\n"
+"    margin: 0px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:horizontal {\n"
+"    background: rgb(98, 98, 98);\n"
+"    border-radius: 2px;\n"
+"    min-width: 20px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:horizontal:hover {\n"
+"    backg"
+                        "round: rgb(68, 68, 68);\n"
+"}\n"
+"\n"
+"QScrollBar::add-line:horizontal,\n"
+"QScrollBar::sub-line:horizontal {\n"
+"    width: 0px;\n"
+"}\n"
+"\n"
+"QScrollBar::add-page:horizontal,\n"
+"QScrollBar::sub-page:horizontal {\n"
+"    background: transparent;\n"
 "}")
         self.widget_frame = QWidget(MainWindow)
         self.widget_frame.setObjectName(u"widget_frame")
@@ -256,7 +305,33 @@ class Ui_MainWindow(object):
         self.widget_radio_list.setObjectName(u"widget_radio_list")
         sizePolicy1.setHeightForWidth(self.widget_radio_list.sizePolicy().hasHeightForWidth())
         self.widget_radio_list.setSizePolicy(sizePolicy1)
-        self.widget_radio_list.setMinimumSize(QSize(0, 10))
+        self.widget_radio_list.setMinimumSize(QSize(0, 40))
+        self.widget_radio_list.setMaximumSize(QSize(16777215, 40))
+        self.verticalLayout_4 = QVBoxLayout(self.widget_radio_list)
+        self.verticalLayout_4.setSpacing(0)
+        self.verticalLayout_4.setObjectName(u"verticalLayout_4")
+        self.verticalLayout_4.setContentsMargins(0, 0, 0, 0)
+        self.table_radio_list = QTableView(self.widget_radio_list)
+        self.table_radio_list.setObjectName(u"table_radio_list")
+        sizePolicy3 = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Maximum)
+        sizePolicy3.setHorizontalStretch(0)
+        sizePolicy3.setVerticalStretch(0)
+        sizePolicy3.setHeightForWidth(self.table_radio_list.sizePolicy().hasHeightForWidth())
+        self.table_radio_list.setSizePolicy(sizePolicy3)
+        self.table_radio_list.setMinimumSize(QSize(0, 40))
+        self.table_radio_list.setMaximumSize(QSize(16777215, 40))
+        self.table_radio_list.setFocusPolicy(Qt.FocusPolicy.NoFocus)
+        self.table_radio_list.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.table_radio_list.setEditTriggers(QAbstractItemView.EditTrigger.CurrentChanged)
+        self.table_radio_list.setSelectionMode(QAbstractItemView.SelectionMode.SingleSelection)
+        self.table_radio_list.setHorizontalScrollMode(QAbstractItemView.ScrollMode.ScrollPerPixel)
+        self.table_radio_list.setShowGrid(False)
+        self.table_radio_list.setCornerButtonEnabled(False)
+        self.table_radio_list.horizontalHeader().setVisible(False)
+        self.table_radio_list.verticalHeader().setVisible(False)
+
+        self.verticalLayout_4.addWidget(self.table_radio_list)
+
 
         self.verticalLayout_3.addWidget(self.widget_radio_list)
 
@@ -276,7 +351,7 @@ class Ui_MainWindow(object):
         self.button_am.setObjectName(u"button_am")
         self.button_am.setFont(font)
         self.button_am.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.button_am.setFocusPolicy(Qt.FocusPolicy.ClickFocus)
+        self.button_am.setFocusPolicy(Qt.FocusPolicy.NoFocus)
         self.button_am.setStyleSheet(u"QPushButton\n"
 "{\n"
 "	color: white\n"
@@ -294,7 +369,7 @@ class Ui_MainWindow(object):
         self.button_fm.setObjectName(u"button_fm")
         self.button_fm.setFont(font)
         self.button_fm.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.button_fm.setFocusPolicy(Qt.FocusPolicy.ClickFocus)
+        self.button_fm.setFocusPolicy(Qt.FocusPolicy.NoFocus)
         self.button_fm.setStyleSheet(u"QPushButton\n"
 "{\n"
 "	color: white\n"
@@ -312,7 +387,7 @@ class Ui_MainWindow(object):
         self.button_dab.setObjectName(u"button_dab")
         self.button_dab.setFont(font)
         self.button_dab.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.button_dab.setFocusPolicy(Qt.FocusPolicy.ClickFocus)
+        self.button_dab.setFocusPolicy(Qt.FocusPolicy.NoFocus)
         self.button_dab.setStyleSheet(u"QPushButton\n"
 "{\n"
 "	color: white\n"
@@ -359,11 +434,11 @@ class Ui_MainWindow(object):
         self.horizontalLayout_7.setContentsMargins(0, 0, 0, 0)
         self.label_radio_icon = QLabel(self.widget_2)
         self.label_radio_icon.setObjectName(u"label_radio_icon")
-        sizePolicy3 = QSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Fixed)
-        sizePolicy3.setHorizontalStretch(0)
-        sizePolicy3.setVerticalStretch(0)
-        sizePolicy3.setHeightForWidth(self.label_radio_icon.sizePolicy().hasHeightForWidth())
-        self.label_radio_icon.setSizePolicy(sizePolicy3)
+        sizePolicy4 = QSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Fixed)
+        sizePolicy4.setHorizontalStretch(0)
+        sizePolicy4.setVerticalStretch(0)
+        sizePolicy4.setHeightForWidth(self.label_radio_icon.sizePolicy().hasHeightForWidth())
+        self.label_radio_icon.setSizePolicy(sizePolicy4)
         self.label_radio_icon.setMinimumSize(QSize(128, 128))
         self.label_radio_icon.setMaximumSize(QSize(128, 128))
         self.label_radio_icon.setPixmap(QPixmap(u":/thumbnails/noiconfm.png"))
@@ -442,7 +517,7 @@ class Ui_MainWindow(object):
         self.pushButton_16.setObjectName(u"pushButton_16")
         self.pushButton_16.setFont(font)
         self.pushButton_16.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.pushButton_16.setFocusPolicy(Qt.FocusPolicy.ClickFocus)
+        self.pushButton_16.setFocusPolicy(Qt.FocusPolicy.NoFocus)
         self.pushButton_16.setStyleSheet(u"QPushButton\n"
 "{\n"
 "	color: white\n"
@@ -473,7 +548,7 @@ class Ui_MainWindow(object):
         self.button_explore.setObjectName(u"button_explore")
         self.button_explore.setFont(font)
         self.button_explore.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.button_explore.setFocusPolicy(Qt.FocusPolicy.ClickFocus)
+        self.button_explore.setFocusPolicy(Qt.FocusPolicy.NoFocus)
         self.button_explore.setStyleSheet(u"QPushButton\n"
 "{\n"
 "	color: white\n"
@@ -498,7 +573,7 @@ class Ui_MainWindow(object):
         self.button_previous.setObjectName(u"button_previous")
         self.button_previous.setFont(font)
         self.button_previous.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.button_previous.setFocusPolicy(Qt.FocusPolicy.ClickFocus)
+        self.button_previous.setFocusPolicy(Qt.FocusPolicy.NoFocus)
         self.button_previous.setStyleSheet(u"QPushButton\n"
 "{\n"
 "	color: white\n"
@@ -523,7 +598,7 @@ class Ui_MainWindow(object):
         self.button_syntonize.setObjectName(u"button_syntonize")
         self.button_syntonize.setFont(font)
         self.button_syntonize.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.button_syntonize.setFocusPolicy(Qt.FocusPolicy.ClickFocus)
+        self.button_syntonize.setFocusPolicy(Qt.FocusPolicy.NoFocus)
         self.button_syntonize.setStyleSheet(u"QPushButton\n"
 "{\n"
 "	color: white\n"
@@ -548,7 +623,7 @@ class Ui_MainWindow(object):
         self.button_next.setObjectName(u"button_next")
         self.button_next.setFont(font)
         self.button_next.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.button_next.setFocusPolicy(Qt.FocusPolicy.ClickFocus)
+        self.button_next.setFocusPolicy(Qt.FocusPolicy.NoFocus)
         self.button_next.setStyleSheet(u"QPushButton\n"
 "{\n"
 "	color: white\n"
@@ -573,7 +648,7 @@ class Ui_MainWindow(object):
         self.button_menu_audio.setObjectName(u"button_menu_audio")
         self.button_menu_audio.setFont(font)
         self.button_menu_audio.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.button_menu_audio.setFocusPolicy(Qt.FocusPolicy.ClickFocus)
+        self.button_menu_audio.setFocusPolicy(Qt.FocusPolicy.NoFocus)
         self.button_menu_audio.setStyleSheet(u"QPushButton\n"
 "{\n"
 "	color: white\n"
@@ -602,7 +677,7 @@ class Ui_MainWindow(object):
         self.button_radio = QPushButton(self.widget_footer)
         self.button_radio.setObjectName(u"button_radio")
         self.button_radio.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.button_radio.setFocusPolicy(Qt.FocusPolicy.ClickFocus)
+        self.button_radio.setFocusPolicy(Qt.FocusPolicy.NoFocus)
         self.button_radio.setStyleSheet(u"QPushButton\n"
 "{\n"
 "image: url(:/icons/radioIconUnselected.png);\n"
@@ -627,7 +702,7 @@ class Ui_MainWindow(object):
         self.button_media = QPushButton(self.widget_footer)
         self.button_media.setObjectName(u"button_media")
         self.button_media.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.button_media.setFocusPolicy(Qt.FocusPolicy.ClickFocus)
+        self.button_media.setFocusPolicy(Qt.FocusPolicy.NoFocus)
         self.button_media.setStyleSheet(u"QPushButton\n"
 "{\n"
 "image: url(:/icons/mediaIconUnselected.png);\n"
@@ -651,7 +726,7 @@ class Ui_MainWindow(object):
         self.button_phone = QPushButton(self.widget_footer)
         self.button_phone.setObjectName(u"button_phone")
         self.button_phone.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.button_phone.setFocusPolicy(Qt.FocusPolicy.ClickFocus)
+        self.button_phone.setFocusPolicy(Qt.FocusPolicy.NoFocus)
         self.button_phone.setStyleSheet(u"QPushButton\n"
 "{\n"
 "image: url(:/icons/phoneIconUnselected.png);\n"
@@ -675,7 +750,7 @@ class Ui_MainWindow(object):
         self.button_connect = QPushButton(self.widget_footer)
         self.button_connect.setObjectName(u"button_connect")
         self.button_connect.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.button_connect.setFocusPolicy(Qt.FocusPolicy.ClickFocus)
+        self.button_connect.setFocusPolicy(Qt.FocusPolicy.NoFocus)
         self.button_connect.setStyleSheet(u"QPushButton\n"
 "{\n"
 "image: url(:/icons/connectIconUnselected.png);\n"
@@ -699,7 +774,7 @@ class Ui_MainWindow(object):
         self.button_footer_audio = QPushButton(self.widget_footer)
         self.button_footer_audio.setObjectName(u"button_footer_audio")
         self.button_footer_audio.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.button_footer_audio.setFocusPolicy(Qt.FocusPolicy.ClickFocus)
+        self.button_footer_audio.setFocusPolicy(Qt.FocusPolicy.NoFocus)
         self.button_footer_audio.setStyleSheet(u"QPushButton\n"
 "{\n"
 "image: url(:/icons/footerAudioIconUnselected.png);\n"
@@ -723,7 +798,7 @@ class Ui_MainWindow(object):
         self.button_settings = QPushButton(self.widget_footer)
         self.button_settings.setObjectName(u"button_settings")
         self.button_settings.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.button_settings.setFocusPolicy(Qt.FocusPolicy.ClickFocus)
+        self.button_settings.setFocusPolicy(Qt.FocusPolicy.NoFocus)
         self.button_settings.setStyleSheet(u"QPushButton\n"
 "{\n"
 "image: url(:/icons/settingsIconUnselected.png);\n"
@@ -747,7 +822,7 @@ class Ui_MainWindow(object):
         self.button_trip = QPushButton(self.widget_footer)
         self.button_trip.setObjectName(u"button_trip")
         self.button_trip.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.button_trip.setFocusPolicy(Qt.FocusPolicy.ClickFocus)
+        self.button_trip.setFocusPolicy(Qt.FocusPolicy.NoFocus)
         self.button_trip.setStyleSheet(u"QPushButton\n"
 "{\n"
 "image: url(:/icons/tripIconUnselected.png);\n"
